@@ -19,9 +19,7 @@ const CommentList = () => {
 
     return (
         <Wrapper>
-            return (
-                <CommentListItem />;
-            )
+            <CommentListItem />
         </Wrapper>
     );
 }

@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import JoinPage from './pages/JoinPage';
 import ReviewWrite from './pages/ReviewWrite';
 import ReviewList from './list/ReviewList';
+import ReviewPage from './pages/ReviewPage';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path='/login' element={<LoginPage/>} />
         <Route path='/join' element={<JoinPage />} />
         <Route path='/review_write' element={<ReviewWrite />} />
-        <Route path='/review' element={<ReviewList />} />
+        <Route path='/reviewlist' element={<ReviewList />} />
+        <Route path='/reviewpage' element={<ReviewPage />} />
       </Routes>
     </BrowserRouter>
   );

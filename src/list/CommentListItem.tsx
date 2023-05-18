@@ -1,32 +1,13 @@
 import React from "react";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-    width: calc(100% - 32px);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    border: 1px solid grey;
-    border-radius: 8px;
-    cursor: pointer;
-    backcround: white;
-    :hover {
-        backfround: lightgrey;
-    }
-`;
-
-const ContentText = styled.p`
-    font-size: 14px;
-`;
+import { Button, Input, Space } from "antd";
 
 const CommentListItem = () => {
 
     return (
-        <Wrapper>
-            <ContentText>댓글</ContentText>
-        </Wrapper>
+        <Space direction="vertical">
+            <Input type='text' id='comment' placeholder="댓글을 입력해주세요" />
+            <Button type='primary'>댓글달기</Button>
+        </Space>
     );
 }
 

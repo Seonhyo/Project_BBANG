@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import ReviewList from './../list/ReviewList';
 
 const MainPage = () => {
 
@@ -9,6 +10,10 @@ const MainPage = () => {
     
     const handleClickReviewWrite = () => {
         navigate("/review_write")
+    }
+
+    const handleClickReviewPage = () => {
+        navigate("/reviewpage")
     }
 
     return (
@@ -21,11 +26,13 @@ const MainPage = () => {
                             <a href='https://map.kakao.com/' style={{textDecoration: 'none', color: '#FFE8D6'}}
                                 target='_blank' rel='noreferrer'>지 도 보 기</a>
                         </li>
-                        <li onClick={handleClickReviewWrite} style={{cursor: 'pointer'}}>후 기 쓰 기</li>
+                        <li onClick={handleClickReviewWrite} 
+                        style={{cursor: 'pointer', marginBottom: 20}}>후 기 쓰 기</li>
+                        <li onClick={handleClickReviewPage} style={{cursor: 'pointer'}}>후 기 보 기</li>
                     </ul>
                 </SideBar>
                 <Content>
-                    빵후기
+                    <ReviewList />
                 </Content>
             </ContentsWrapper>
         </Wrapper>

@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import ReviewListItem from "./ReviewListItem";
 
+const ReviewList = () => {
+
+    return (
+        <Wrapper>
+            <ReviewListItem />
+        </Wrapper>
+    )
+}
+
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -15,15 +24,4 @@ const Wrapper = styled.div`
     }
 `;
 
-const PostList = () => {
-
-    return (
-        <Wrapper>
-                return (
-                    <ReviewListItem />
-                );
-        </Wrapper>
-    )
-}
-
-export default PostList;
+export default ReviewList;
